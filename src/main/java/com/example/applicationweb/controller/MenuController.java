@@ -42,16 +42,14 @@ public class MenuController {
 
         ModelAndView result = null;
         switch (form) {
-            case "newOrder" -> {
+            case "newOrder" :
                 result = new ModelAndView("order-new");
                 result.addObject("Authorization", messenger);
                 result.addObject("districts", districtsList);
-            }
-            case "orderReceipt" -> {
+            case "orderReceipt":
                 result = new ModelAndView("order");
                 result.addObject("Authorization", messenger);
                 result.addObject("districts", districtsList);
-            }
         }
 
         return result;
