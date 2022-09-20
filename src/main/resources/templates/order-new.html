@@ -14,6 +14,7 @@
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossorigin="anonymous">
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
     <style>
 
         .form-retreat {
@@ -53,7 +54,7 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-12 col-lg-9 col-xl-7">
                     <div class="card shadow-2-strong card-registration"
-                         style="border-radius: 15px;  background-color:#fff9c4;">
+                         style="border-radius: 15px; background-color:#fff9c4;">
                         <div style="text-align:center">
                             <img src="https://i.ytimg.com/an/xDn25NHf8bgAmKRw0PODww/featured_channel.jpg?v=627d03d5"
                                  height="150" width="150">
@@ -70,7 +71,7 @@
                                 <div class="form-retreat">
                                     <div class="form-control-string">
                                         <div class="form-control-string">
-                                            <div class="form-control-label">
+                                            <div>
                                                 <b> Ім'я </b>
                                                 <span>
 									                *
@@ -93,7 +94,7 @@
 
                                         <div class="form-control-string">
                                             <div class="form-control-string">
-                                                <div class="form-control-container form-control-icon-after">
+                                                <div class="form-control-container">
                                                     <b> Дата народження </b>
                                                     <span>
 								                	*
@@ -103,8 +104,8 @@
                                             </div>
                                         </div>
                                         <div class="form-control-string">
-                                            <div class="form-control-container form-control-icon-after">
-                                                <div class="form-control-label">
+                                            <div class="form-control-container">
+                                                <div>
                                                     <b> Телефон </b>
                                                     <span>
 									                    *
@@ -115,17 +116,17 @@
                                                        required>
                                             </div>
                                         </div>
-                                        <div class="form-control-string">
+                                        <div class="form-control-string form-control-container">
                                             <div>
                                                 <div>
-                                                    <b> Район (куди має бути гуманітарка
-                                                        доставлено) </b>
-                                                </div>
-                                                <div>
-                                                    <select name="districts" th:field="${districts}">
-                                                        <option th:each="value : ${districts}"
-                                                                th:value="${value.getKey()}"
-                                                                th:text="${value.getValue()}"></option>
+                                                    <label><b>Район (куди має бути гуманітарка
+                                                        доставлено)</b></label>
+                                                    <select id="districtsValue" name="districtsValue"
+                                                            class="form-control form-control ">
+                                                        <option th:each="districtsValue : ${districts}"
+                                                                th:value="${districtsValue.key}"
+                                                                th:text="${districtsValue.value}">
+                                                        </option>
                                                     </select>
                                                 </div>
                                             </div>

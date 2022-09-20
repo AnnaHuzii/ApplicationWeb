@@ -80,7 +80,7 @@ public class CreateDaoService {
         }
     }
 
-    public String createApplicationFile(UsrApplication order, UBMAppClient client, UBMApplicationsFile photo) {
+    public String createApplicationFile(UsrApplication order, UBMAppClient client, UBMApplicationsFile photo, UBMApplicationsFile video) {
 
         String id = MobilePhoneClient(client.getMobilePhone());
         if (id == null) {
@@ -98,8 +98,12 @@ public class CreateDaoService {
             idOrder = OrderHttp.sendingOrder(url, orderConnection);
 
             String urlFile = propertiesReaderOrder.getURL_FILE();
-            UBMApplicationsFile fileConnection = file(photo, idOrder);
-            connection = FileHttp.addFile(urlFile, fileConnection);
+            UBMApplicationsFile fileConnectionPhoto = file(photo, idOrder);
+            UBMApplicationsFile fileConnectionVideo = file(video, idOrder);
+            connection = FileHttp.addFile(urlFile, fileConnectionPhoto);
+            if (!video.getName().equals("")){
+                FileHttp.addFile(urlFile, fileConnectionVideo);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -153,7 +157,7 @@ public class CreateDaoService {
                 Size(photo.getSize()).
                 SysFileStorageId(photo.getSysFileStorageId()).
                 UBMApplicationsId(idOrder).
-                FileGroupId(photo.getFileGroupId()).
+//                FileGroupId(photo.getFileGroupId()).
                 build();
 
     }

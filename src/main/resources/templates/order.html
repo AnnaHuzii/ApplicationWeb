@@ -92,11 +92,11 @@
                             <b1 th:text="${error}" class="inscription-error"></b1>
                             <!--endif-->
                             <h1>Оформлення заявки на місці </h1>
-                            <form action="/confirmation-order-file"  method="POST" enctype="multipart/form-data">
+                            <form action="/confirmation-order-file" method="POST" enctype="multipart/form-data">
                                 <div class="form-retreat">
                                     <div class="form-control-string">
                                         <div>
-                                            <div class="form-control-label">
+                                            <div>
                                                 <b> Ім'я </b>
                                                 <span>
                                                     *
@@ -108,8 +108,8 @@
 
                                     </div>
                                     <div class="form-control-string">
-                                        <div class="form-control-container form-control-icon-after">
-                                            <div class="form-control-label">
+                                        <div class="form-control-container">
+                                            <div>
                                                 <b> Прізвище </b>
                                                 <span>
 									                *
@@ -142,77 +142,81 @@
                                                    class="form-control" required>
                                         </div>
                                     </div>
-                                    <div class="form-control-container">
+                                    <div class="form-control-string form-control-container">
                                         <div>
                                             <div>
-                                                <b> Район (куди має бути гуманітарка
-                                                    доставлено) </b>
-                                            </div>
-                                            <div>
-                                                <select name="districts" th:field="${districts}">
-                                                    <option th:each="value : ${districts}"
-                                                            th:value="${value.getKey()}"
-                                                            th:text="${value.getValue()}"></option>
+                                                <label><b>Район (куди має бути гуманітарка
+                                                    доставлено)</b></label>
+                                                <select id="districtsValue" name="districtsValue"
+                                                        class="form-control form-control ">
+                                                    <option th:each="districtsValue : ${districts}"
+                                                            th:value="${districtsValue.key}"
+                                                            th:text="${districtsValue.value}">
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-control-string">
-                                    <div class="form-control-container">
-                                        <div class="form-control-label">
-                                            <b> Вулиця (тільки назва) </b>
-                                            <span class="form-control-required" style="display: none;">
+                                    <div class="form-control-string">
+                                        <div class="form-control-container">
+                                            <div class="form-control-label">
+                                                <b> Вулиця (тільки назва) </b>
+                                                <span class="form-control-required" style="display: none;">
 									                    *
 								                    </span>
+                                            </div>
+                                            <input name="street" type="string" class="form-control">
                                         </div>
-                                        <input name="street" type="string" class="form-control">
                                     </div>
-                                </div>
-                                <div class="form-control-string">
-                                    <div class="form-control-container form-control-icon-after">
-                                        <div class="form-control-label">
-                                            <b> Номер будинку </b>
-                                            <span class="form-control-required" style="display: none;">
+                                    <div class="form-control-string">
+                                        <div class="form-control-container form-control-icon-after">
+                                            <div class="form-control-label">
+                                                <b> Номер будинку </b>
+                                                <span class="form-control-required" style="display: none;">
 									                    *
 								                    </span>
+                                            </div>
+                                            <input name="house-number" type="string" class="form-control">
                                         </div>
-                                        <input name="house-number" type="string" class="form-control">
                                     </div>
-                                </div>
-                                <div class="form-control-string"><!---->
-                                    <div class="form-control-container">
-                                        <div class="form-control-label">
-                                            <b> Фото доставки </b>
-                                            <span>
+                                    <div class="form-control-string">
+                                        <div class="form-control-container form-control-icon-after">
+                                            <div class="form-control-label">
+                                                <b> Кількість людей </b>
+                                            </div>
+                                            <input name="number-people" type="string" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-control-string"><!---->
+                                        <div class="form-control-container">
+                                            <div class="form-control-label">
+                                                <b> Фото доставки </b>
+                                                <span>
 								                *
 							                    </span>
-                                        </div>
-                                        <div>
-                                            <label for="photo" class="form-control">
-                                                <input id="photo" name="photo" type="file" accept=".jpg, .jpeg, .png"
-                                                       required>
-                                            </label>
+                                            </div>
+                                            <div class="form-control">
+                                                    <input name="photo" type="file" accept="image/*"
+                                                           required>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-control-string"><!---->
-                                    <div class="form-control-container">
-                                        <div class="form-control-label">
-                                            <b> Відео з доставки (необов'язково) </b>
-                                            <span class="form-control-required" style="display: none;">
+                                    <div class="form-control-string"><!---->
+                                        <div class="form-control-container">
+                                            <div class="form-control-label">
+                                                <b> Відео з доставки (необов'язково) </b>
+                                                <span class="form-control-required" style="display: none;">
 								                    *
                                                 </span>
-                                        </div>
-                                        <div>
-                                            <label for="video" class="form-control">
-                                                <input id="video" name="photo" type="file" accept>
-                                            </label>
+                                            </div>
+                                            <div class="form-control">
+                                                    <input name="video" type="file" accept="video/*">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="mt-4 pt-2" style="text-align:center">
-                                    <input type="submit" class="submit1" value="Відправити заявку">
+                                    <div class="mt-4 pt-2" style="text-align:center">
+                                        <input type="submit" class="submit1" value="Відправити заявку">
+                                    </div>
                                 </div>
                             </form>
                         </div>
