@@ -157,7 +157,7 @@ public class CreateDaoService {
                 Size(photo.getSize()).
                 SysFileStorageId(photo.getSysFileStorageId()).
                 UBMApplicationsId(idOrder).
-//                FileGroupId(photo.getFileGroupId()).
+                FileGroupId(photo.getFileGroupId()).
                 build();
 
     }
