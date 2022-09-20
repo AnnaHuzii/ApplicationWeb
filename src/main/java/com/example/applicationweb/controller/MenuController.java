@@ -46,10 +46,12 @@ public class MenuController {
                 result = new ModelAndView("order-new");
                 result.addObject("Authorization", messenger);
                 result.addObject("districts", districtsList);
+                break;
             case "orderReceipt":
                 result = new ModelAndView("order");
                 result.addObject("Authorization", messenger);
                 result.addObject("districts", districtsList);
+                break;
         }
 
         return result;
