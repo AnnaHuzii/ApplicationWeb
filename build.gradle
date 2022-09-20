@@ -39,3 +39,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+jar {
+	baseName = 'app'
+	version = '0.0.1'
+}
