@@ -90,11 +90,14 @@ public class MenuController {
                 MobilePhone(phone).
                 GivenName(name).
                 MiddleName(surname).
+                UBMDistrictId(districts).
+                Address(street).
+                UBMHouseNumber(houseNumber).
+                UBMContactNumberOfPeople(numberPeople).
                 build();
 
         UBMApplicationsFile filePhoto;
         UBMApplicationsFile fileVideo;
-        UBMApplicationsFileData data;
         try {
 
             filePhoto = UBMApplicationsFile.builder().
