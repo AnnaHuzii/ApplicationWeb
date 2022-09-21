@@ -14,6 +14,9 @@
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
     <style>
 
         .form-retreat {
@@ -132,14 +135,15 @@
                                     </div>
                                     <div class="form-control-string">
                                         <div class="form-control-container">
-                                            <div class="form-control-label">
+                                            <div>
                                                 <b> Телефон </b>
                                                 <span>
-									                *
-								                </span>
-                                            </div> <!----> <!---->
-                                            <input autocomplete="tel" name="phone" type="tel"
-                                                   class="form-control" required>
+									                    *
+								                    </span>
+                                            </div>
+                                            <input name="phone" type="tel"
+                                                   class="form-control phone"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="form-control-string form-control-container">
@@ -190,7 +194,7 @@
                                     <div class="form-control-string"><!---->
                                         <div >
                                             <div>
-                                                <b> Фото доставки </b>
+                                                <b> Фото доставки (1MB) </b>
                                                 <span>
 								                *
 							                    </span>
@@ -204,13 +208,13 @@
                                     <div class="form-control-string"><!---->
                                         <div class="form-control-container">
                                             <div class="form-control-label">
-                                                <b> Відео з доставки (необов'язково) </b>
+                                                <b> Відео з доставки (необов'язково)(1MB) </b>
                                                 <span class="form-control-required" style="display: none;">
 								                    *
                                                 </span>
                                             </div>
                                             <div class="form-control">
-                                                    <input name="video" type="file" accept="video/*">
+                                                    <input name="video" type="file" accept="video/*" >
                                             </div>
                                         </div>
                                     </div>
@@ -226,5 +230,8 @@
         </div>
     </section>
 </div>
+<script>
+    $(".phone").mask("+38(999)999-9999");
+</script>
 </body>
 </html>

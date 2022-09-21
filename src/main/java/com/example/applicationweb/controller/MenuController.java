@@ -3,6 +3,7 @@ package com.example.applicationweb.controller;
 import com.example.applicationweb.connection.StorageUser;
 import com.example.applicationweb.creatio.client.UBMAppClient;
 import com.example.applicationweb.creatio.file.UBMApplicationsFile;
+import com.example.applicationweb.creatio.file.UBMApplicationsFileData;
 import com.example.applicationweb.creatio.order.UsrApplication;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -67,10 +68,11 @@ public class MenuController {
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         String birthDate = request.getParameter("birth_date");
-        String phone = request.getParameter("phone");
+        String phoneRequest = request.getParameter("phone");
         String street = request.getParameter("street");
         String houseNumber = request.getParameter("house-number");
         String numberPeople = request.getParameter("number-people");
+        String phone = phoneRequest.replaceAll("\\D+", "");
 
         UsrApplication order = UsrApplication.builder().
                 UBMAppDistrictId(districts).
@@ -92,7 +94,9 @@ public class MenuController {
 
         UBMApplicationsFile filePhoto;
         UBMApplicationsFile fileVideo;
+        UBMApplicationsFileData data;
         try {
+
             filePhoto = UBMApplicationsFile.builder().
                     Name(photo.getOriginalFilename()).
                     TypeId("529bc2f8-0ee0-df11-971b-001d60e938c6").
@@ -107,6 +111,7 @@ public class MenuController {
                     SysFileStorageId("65e42805-0e6d-43c9-8784-32b555f08421").
                     FileGroupId("efbf3a0d-d780-465a-8e4b-8c0765197cfb").
                     build();
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -126,10 +131,12 @@ public class MenuController {
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         String birthDate = request.getParameter("birth_date");
-        String phone = request.getParameter("phone");
+        String phoneRequest = request.getParameter("phone");
         String street = request.getParameter("street");
         String houseNumber = request.getParameter("house-number");
         String numberPeople = request.getParameter("number-people");
+
+        String phone = phoneRequest.replaceAll("\\D+", "");
 
         UsrApplication order = UsrApplication.builder().
                 UBMAppDistrictId(districts).

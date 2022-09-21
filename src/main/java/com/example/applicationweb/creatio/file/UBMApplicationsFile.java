@@ -13,4 +13,5 @@ public class UBMApplicationsFile {
     private String SysFileStorageId;
     private String UBMApplicationsId;
     private String FileGroupId;
+    private UBMApplicationsFileData Data;
 }
