@@ -11,6 +11,10 @@ public class UBMAppClient {
     private String TypeId;
     private String BirthDate;
     private String MobilePhone;
+    private String UBMDistrictId;
+    private String Address;
+    private String UBMHouseNumber;
+    private String UBMContactNumberOfPeople;
     private String GivenName;
     private String MiddleName;
 }

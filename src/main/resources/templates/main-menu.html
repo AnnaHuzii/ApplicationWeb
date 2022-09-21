@@ -5,9 +5,7 @@
 <head>
     <meta charset=UTF-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="MobileOptimized" content="width">
     <title>Головна</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -15,7 +13,7 @@
           crossorigin="anonymous">
     <style>
         .form-center {
-            padding: 50px;
+            padding: 60px;
             background: #fff9c4;
             position: fixed;
             top: 50%;
@@ -46,14 +44,14 @@
     </style>
 </head>
 <body>
-<div class="form-center card shadow-2-strong card-registration" style="border-radius: 15px;">
+<div class="form-center card shadow-2-strong card-registration card-body p-4" style="border-radius: 15px;">
     <form name="radio" action="/order" method="GET">
         <div class="form-control-string">
             <div style="text-align:center">
                 <img src="https://i.ytimg.com/an/xDn25NHf8bgAmKRw0PODww/featured_channel.jpg?v=627d03d5">
             </div>
-            <h1 class="inscription" style="font-size: 20pt">Виберіть форму, з якою ви хочете працювати:</h1>
-            <div class="inscription" style="font-size: 15pt">
+            <h1 class="inscription" style="font-size: 18pt; text-align:center">Виберіть форму, з якою ви хочете працювати:</h1>
+            <div class="inscription" style="font-size: 13pt">
             <input type="radio" id="NewOrder" name="form" value="newOrder" checked>
                 <label for="NewOrder">Нове замовлення</label><br>
             <input type="radio" id="OrderReceipt" name="form" value="orderReceipt">

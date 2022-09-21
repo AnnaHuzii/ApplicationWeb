@@ -52,6 +52,7 @@ public class CreateDaoService {
         }
         return replyClient;
     }
+
     public String createApplicationNew(UsrApplication order, UBMAppClient client) {
 
         String id = MobilePhoneClient(client.getMobilePhone());
@@ -101,7 +102,7 @@ public class CreateDaoService {
             UBMApplicationsFile fileConnectionPhoto = file(photo, idOrder);
             UBMApplicationsFile fileConnectionVideo = file(video, idOrder);
             connection = FileHttp.addFile(urlFile, fileConnectionPhoto);
-            if (!video.getName().equals("")){
+            if (!video.getName().equals("")) {
                 FileHttp.addFile(urlFile, fileConnectionVideo);
             }
 
@@ -132,7 +133,11 @@ public class CreateDaoService {
                 BirthDate(client.getBirthDate()).
                 MobilePhone(client.getMobilePhone()).
                 MiddleName(client.getMiddleName()).
-                GivenName(client.getGivenName())
+                GivenName(client.getGivenName()).
+                UBMDistrictId(client.getUBMDistrictId()).
+                Address(client.getAddress()).
+                UBMHouseNumber(client.getUBMHouseNumber()).
+                UBMContactNumberOfPeople(client.getUBMContactNumberOfPeople())
                 .build();
     }
 

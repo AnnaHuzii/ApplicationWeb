@@ -2,6 +2,7 @@ package com.example.applicationweb.creatio.file;
 
 import com.example.applicationweb.connection.StorageUser;
 import com.example.applicationweb.controller.CreateDaoService;
+import com.example.applicationweb.creatio.client.JsonGet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import okhttp3.*;
@@ -22,11 +23,11 @@ public class FileHttp {
         String authorization = creatioOrderDaoService.authorization(util.getConnection());
 
         List<String> list = new ArrayList<>();
-        String [] cookies = authorization.split(";");
+        String[] cookies = authorization.split(";");
         Collections.addAll(list, cookies);
         String cookie = list.get(2);
         List<String> listCookie = new ArrayList<>();
-        String [] cookiesName = cookie.split("=");
+        String[] cookiesName = cookie.split("=");
         Collections.addAll(listCookie, cookiesName);
         String cookieValue = listCookie.get(1);
 
@@ -42,7 +43,16 @@ public class FileHttp {
                 .addHeader("BPMCSRF", cookieValue)
                 .build();
         Response response = CLIENT.newCall(request).execute();
-        return response.code() == RESPONCE_CODE_OK;
+
+        if (response.code() == RESPONCE_CODE_OK) {
+            String myResponse = response.body().string();
+            JsonReplyFile jsonGet = GSON.fromJson(myResponse, JsonReplyFile.class);
+            for (UBMApplicationsFile fileReply : jsonGet.getValue()) {
+                String fileId = fileReply.getId();
+            }
+            return true;
+        }
+        return false;
     }
 }
 

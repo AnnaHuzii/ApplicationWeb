@@ -42,7 +42,7 @@ public class MenuController {
 
         ModelAndView result = null;
         switch (form) {
-            case "newOrder" :
+            case "newOrder":
                 result = new ModelAndView("order-new");
                 result.addObject("Authorization", messenger);
                 result.addObject("districts", districtsList);
@@ -62,7 +62,7 @@ public class MenuController {
     public String getOrderFile(Model model, HttpServletRequest request,
                                @RequestParam(value = "districtsValue") String districts,
                                @RequestParam("photo") MultipartFile photo,
-                               @RequestParam("video") MultipartFile video){
+                               @RequestParam("video") MultipartFile video) {
 
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
@@ -112,7 +112,7 @@ public class MenuController {
             throw new RuntimeException(e);
         }
 
-        String messenger = creatioOrderDaoService.createApplicationFile(order, client, filePhoto,fileVideo);
+        String messenger = creatioOrderDaoService.createApplicationFile(order, client, filePhoto, fileVideo);
 
         model.addAttribute("reply", messenger);
 
@@ -147,6 +147,10 @@ public class MenuController {
                 MobilePhone(phone).
                 GivenName(name).
                 MiddleName(surname).
+                UBMDistrictId(districts).
+                Address(street).
+                UBMHouseNumber(houseNumber).
+                UBMContactNumberOfPeople(numberPeople).
                 build();
 
         String messenger = creatioOrderDaoService.createApplicationNew(order, client);
