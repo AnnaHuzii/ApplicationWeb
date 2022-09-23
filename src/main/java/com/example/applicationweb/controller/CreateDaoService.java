@@ -1,13 +1,13 @@
-package com.example.applicationwebprod.controller;
+package com.example.applicationweb.controller;
 
-import com.example.applicationwebprod.connection.PropertiesReader;
-import com.example.applicationwebprod.creatio.client.ClientHttp;
-import com.example.applicationwebprod.creatio.client.UBMAppClient;
-import com.example.applicationwebprod.creatio.districts.DistrictsHttp;
-import com.example.applicationwebprod.creatio.file.FileHttp;
-import com.example.applicationwebprod.creatio.file.UBMApplicationsFile;
-import com.example.applicationwebprod.creatio.order.OrderHttp;
-import com.example.applicationwebprod.creatio.order.UsrApplication;
+import com.example.applicationweb.connection.PropertiesReader;
+import com.example.applicationweb.creatio.client.ClientHttp;
+import com.example.applicationweb.creatio.client.UBMAppClient;
+import com.example.applicationweb.creatio.districts.DistrictsHttp;
+import com.example.applicationweb.creatio.file.FileHttp;
+import com.example.applicationweb.creatio.file.UBMApplicationsFile;
+import com.example.applicationweb.creatio.order.OrderHttp;
+import com.example.applicationweb.creatio.order.UsrApplication;
 
 import java.util.List;
 import java.util.Map;

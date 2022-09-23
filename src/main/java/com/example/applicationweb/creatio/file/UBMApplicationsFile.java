@@ -1,4 +1,4 @@
-package com.example.applicationwebprod.creatio.file;
+package com.example.applicationweb.creatio.file;
 
 import lombok.Builder;
 import lombok.Data;

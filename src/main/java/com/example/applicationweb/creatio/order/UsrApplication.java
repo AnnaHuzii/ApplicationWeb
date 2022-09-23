@@ -1,4 +1,4 @@
-package com.example.applicationwebprod.creatio.order;
+package com.example.applicationweb.creatio.order;
 
 import lombok.Builder;
 import lombok.Data;

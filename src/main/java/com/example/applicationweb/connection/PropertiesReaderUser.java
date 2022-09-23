@@ -1,4 +1,4 @@
-package com.example.applicationwebprod.connection;
+package com.example.applicationweb.connection;
 
 import lombok.Getter;
 
