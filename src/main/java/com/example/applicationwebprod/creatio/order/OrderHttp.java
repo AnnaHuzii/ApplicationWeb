@@ -1,8 +1,8 @@
-package com.example.applicationweb.creatio.order;
+package com.example.applicationwebprod.creatio.order;
 
-import com.example.applicationweb.connection.StorageUser;
-import com.example.applicationweb.controller.CreateDaoService;
-import com.example.applicationweb.creatio.client.UBMAppClient;
+import com.example.applicationwebprod.connection.StorageUser;
+import com.example.applicationwebprod.controller.CreateDaoService;
+import com.example.applicationwebprod.creatio.client.UBMAppClient;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import okhttp3.*;

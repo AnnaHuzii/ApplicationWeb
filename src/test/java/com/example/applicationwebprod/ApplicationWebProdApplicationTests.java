@@ -1,13 +1,13 @@
-package com.example.applicationweb;
+package com.example.applicationwebprod;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationWebApplicationTests {
+class ApplicationWebProdApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

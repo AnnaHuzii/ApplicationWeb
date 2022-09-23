@@ -1,7 +1,7 @@
-package com.example.applicationweb.connection;
+package com.example.applicationwebprod.connection;
 
-import com.example.applicationweb.creatio.user.User;
-import com.example.applicationweb.creatio.user.UserHttp;
+import com.example.applicationwebprod.creatio.user.User;
+import com.example.applicationwebprod.creatio.user.UserHttp;
 
 import java.util.List;
 

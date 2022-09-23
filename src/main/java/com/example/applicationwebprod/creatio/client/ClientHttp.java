@@ -1,7 +1,7 @@
-package com.example.applicationweb.creatio.client;
+package com.example.applicationwebprod.creatio.client;
 
-import com.example.applicationweb.connection.StorageUser;
-import com.example.applicationweb.controller.CreateDaoService;
+import com.example.applicationwebprod.connection.StorageUser;
+import com.example.applicationwebprod.controller.CreateDaoService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import lombok.SneakyThrows;

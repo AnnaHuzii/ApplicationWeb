@@ -1,4 +1,4 @@
-package com.example.applicationweb.creatio.districts;
+package com.example.applicationwebprod.creatio.districts;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.example.applicationweb.creatio.user;
+package com.example.applicationwebprod.creatio.user;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -1,16 +1,16 @@
-package com.example.applicationweb.controller;
+package com.example.applicationwebprod.controller;
 
-import com.example.applicationweb.connection.StorageUser;
-import com.example.applicationweb.creatio.client.UBMAppClient;
-import com.example.applicationweb.creatio.file.UBMApplicationsFile;
-import com.example.applicationweb.creatio.file.UBMApplicationsFileData;
-import com.example.applicationweb.creatio.order.UsrApplication;
-import org.springframework.beans.factory.annotation.Value;
+import com.example.applicationwebprod.connection.StorageUser;
+import com.example.applicationwebprod.creatio.client.UBMAppClient;
+import com.example.applicationwebprod.creatio.file.UBMApplicationsFile;
+import com.example.applicationwebprod.creatio.order.UsrApplication;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
