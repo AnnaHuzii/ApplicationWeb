@@ -151,6 +151,7 @@ public class CreateDaoService {
                 UBMAppNumberOfPeople(order.getUBMAppNumberOfPeople()).
                 UBMAppSourceId(order.getUBMAppSourceId()).
                 UBMAppStageId(order.getUBMAppStageId()).
+                UBMApplicationMobilePhone(order.getUBMApplicationMobilePhone()).
                 build();
     }
 

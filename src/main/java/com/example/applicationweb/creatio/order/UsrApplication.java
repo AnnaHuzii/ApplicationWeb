@@ -14,4 +14,5 @@ public class UsrApplication {
     private String UBMAppHousenumber;
     private String UBMAppSourceId;
     private String UBMAppStageId;
+    private String UBMApplicationMobilePhone;
 }

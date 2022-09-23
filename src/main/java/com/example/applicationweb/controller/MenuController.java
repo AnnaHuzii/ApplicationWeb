@@ -81,6 +81,7 @@ public class MenuController {
                 UBMAppNumberOfPeople(numberPeople).
                 UBMAppStageId("e479f5ff-dcb3-4679-86c5-1b2300839008").
                 UBMAppSourceId("cb6437df-877d-40a2-9c36-2bfa0f6d5661").
+                UBMApplicationMobilePhone(phone).
                 build();
 
         UBMAppClient client = UBMAppClient.builder().
@@ -148,6 +149,7 @@ public class MenuController {
                 UBMAppNumberOfPeople(numberPeople).
                 UBMAppStageId("97180019-59f8-4dbf-9d71-8cc51778018b").
                 UBMAppSourceId("cb6437df-877d-40a2-9c36-2bfa0f6d5661").
+                UBMApplicationMobilePhone(phone).
                 build();
 
         UBMAppClient client = UBMAppClient.builder().
